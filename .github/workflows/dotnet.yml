@@ -1,0 +1,25 @@
+name: .NET
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: setup-msbuild
+      uses: microsoft/setup-msbuild@v1.1
+
+    - name: Restore NuGet Packages
+      run: nuget restore SearchIndex.sln
+
+    - name: Build
+      run: msbuild SearchIndex.sln t:rebuild -verbosity:diag -property:Configuration=Release
+
