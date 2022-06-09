@@ -8,18 +8,23 @@ on:
 
 jobs:
   build:
-
-    runs-on: windows-latest
-
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: setup-msbuild
-      uses: microsoft/setup-msbuild@v1.1
-
-    - name: Restore NuGet Packages
-      run: nuget restore SearchIndex.sln
-
-    - name: Build
-      run: msbuild SearchIndex.sln -t:rebuild -verbosity:diag -property:Configuration=Release
-
+      - uses: actions/checkout@v2
+      - name: prepare data
+        run: |
+          cd release
+          zip -qr "${{ github.event.repository.name }}.zip" Config LICENSE.md ModInfo.xml README.md Quartz.dll QuartzLoader.dll SearchIndex.dll
+          version=$(sed -n '/Version/{s/.*<Version value=\"\(.*\)\"[ ]*\/>.*/\1/;p}' ModInfo.xml)
+          echo "version=$version" >> $GITHUB_ENV
+          prerelease=$([[ $version = 0* ]] && echo "true" || echo "false")
+          echo "prerelease=$prerelease" >> $GITHUB_ENV
+      - uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ env.version }}
+          commit: main
+          name: ${{ github.event.pull_request.title }}
+          body: ${{ github.event.pull_request.body }}
+          generateReleaseNotes: true
+          artifacts: "${{ github.event.repository.name }}.zip"
+          prerelease: ${{ env.prerelease }}
