@@ -16,7 +16,7 @@
 	<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@controller">Quartz.LootContainer, Quartz</set>
 
 	<append xpath="/windows">
-		<window name="searchLootWindow" controller="SearchIndex.XUiC_SearchLoot, SearchIndex" pos="-500,0" width="300" height="50" cursor_area="true">
+		<window name="searchLootWindow" controller="SearchIndex.XUiC_SearchIndex, SearchIndex" pos="-500,0" width="300" height="50" cursor_area="true">
 			<panel name="searchLootContent" width="{width}" height="{height}" depth="0" pos="0,0" disableautobackground="false">
 				<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="100%" height="{height}" color="[mediumGrey]" type="sliced" fillcenter="false" on_press="true" />
 				<sprite style="header.icon" sprite="ui_game_symbol_search"/>

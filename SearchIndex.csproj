@@ -7,8 +7,8 @@
     <ProjectGuid>{39972141-293A-4D48-90FE-CC8BE129FF38}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SearchLoot</RootNamespace>
-    <AssemblyName>SearchLoot</AssemblyName>
+    <RootNamespace>SearchIndex</RootNamespace>
+    <AssemblyName>SearchIndex</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -25,7 +25,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>.\</OutputPath>
+    <OutputPath>release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -51,6 +51,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\Quartz.dll</HintPath>
     </Reference>
+    <Reference Include="QuartzLoader, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\QuartzLoader.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -61,45 +65,45 @@
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Script\Extensions\StringExtensions.cs" />
     <Compile Include="Script\TextInput.cs" />
-    <Compile Include="Script\XUiC\XUiC_SearchLoot.cs" />
+    <Compile Include="Script\XUiC\XUiC_SearchIndex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="LICENSE.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
+    <None Include="README.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Config\XUi\controls.xml" />
-    <Content Include="Config\XUi\windows.xml" />
-    <Content Include="Config\XUi\xui.xml" />
-    <Content Include="Config\XUi_Common\styles.xml" />
-    <Content Include="ModInfo.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ContentWithTargetPath Include="Config\XUi\controls.xml">
+    <Content Include="Config\XUi\controls.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>Config\XUi\controls.xml</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="Config\XUi\windows.xml">
+    </Content>
+    <Content Include="Config\XUi\windows.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>Config\XUi\windows.xml</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="Config\XUi\xui.xml">
+    </Content>
+    <Content Include="Config\XUi\xui.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>Config\XUi\xui.xml</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="Config\XUi_Common\styles.xml">
+    </Content>
+    <Content Include="Config\XUi_Common\styles.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>Config\XUi_Common\styles.xml</TargetPath>
-    </ContentWithTargetPath>
+    </Content>
+    <Content Include="ModInfo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
