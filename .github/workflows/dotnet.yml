@@ -13,7 +13,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: prepare data
         run: |
-          cd release
           zip -qr "${{ github.event.repository.name }}.zip" Config LICENSE.md ModInfo.xml README.md Quartz.dll QuartzLoader.dll SearchIndex.dll
           version=$(sed -n '/Version/{s/.*<Version value=\"\(.*\)\"[ ]*\/>.*/\1/;p}' ModInfo.xml)
           echo "version=$version" >> $GITHUB_ENV
