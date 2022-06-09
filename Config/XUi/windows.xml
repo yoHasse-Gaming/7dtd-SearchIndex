@@ -1,12 +1,12 @@
 <SearchLoot>
 	<append xpath="/windows/window[@name='windowBackpack']">
-		<panel depth="10" controller="SearchIndex.TextInput, SearchIndex" name="backpackSearchField" pos="49,-5" width="220" height="30" value="empty" active_text_color="[white]" caret_color="[white]" selection_color="[mediumGrey_half_alpha]" character_limit="100" validation="none" backgroundcolor="[black]" style="select">
+		<panel depth="10" controller="SearchIndex.TextInput, SearchIndex" name="backpackSearchField" pos="49,-5" width="0" height="0" value="empty" active_text_color="[white]" caret_color="[white]" selection_color="[mediumGrey_half_alpha]" character_limit="100" validation="none" backgroundcolor="[black]" style="select">
 			<sprite depth="0" name="background" color="[black]" type="sliced"/>
 			<label depth="1" name="text" pos="0,-2" justify="center" pivot="topleft" upper_case="false"/>
 		</panel>
 	</append>
 	<append xpath="/windows/window[@name='windowLooting']">
-		<panel depth="10" controller="SearchIndex.TextInput, SearchIndex" name="lootContainerSearchField" pos="49,-5" width="220" height="30" value="empty" active_text_color="[white]" caret_color="[white]" selection_color="[mediumGrey_half_alpha]" character_limit="100" validation="none" backgroundcolor="[black]" style="select">
+		<panel depth="10" controller="SearchIndex.TextInput, SearchIndex" name="lootContainerSearchField" pos="49,-5" width="0" height="0" value="empty" active_text_color="[white]" caret_color="[white]" selection_color="[mediumGrey_half_alpha]" character_limit="100" validation="none" backgroundcolor="[black]" style="select">
 			<sprite depth="0" name="background" color="[black]" type="sliced"/>
 			<label depth="1" name="text" pos="0,-2" justify="center" pivot="topleft" upper_case="false"/>
 		</panel>
