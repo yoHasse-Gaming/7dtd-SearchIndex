@@ -1,0 +1,5 @@
+<config>
+	<set xpath="/controls/item_stack/@controller">Quartz.ItemStack, Quartz</set>
+	<set xpath="/controls/backpack_item_stack/@controller">Quartz.ItemStack, Quartz</set>
+	<set xpath="/controls/drag_item_stack/rect/@controller">Quartz.ItemStack, Quartz</set>
+</config>

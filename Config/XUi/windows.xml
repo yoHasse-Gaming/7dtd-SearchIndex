@@ -1,0 +1,29 @@
+<SearchLoot>
+	<append xpath="/windows/window[@name='windowBackpack']">
+		<panel depth="10" controller="SearchIndex.TextInput, SearchIndex" name="backpackSearchField" pos="49,-5" width="220" height="30" value="empty" active_text_color="[white]" caret_color="[white]" selection_color="[mediumGrey_half_alpha]" character_limit="100" validation="none" backgroundcolor="[black]" style="select">
+			<sprite depth="0" name="background" color="[black]" type="sliced"/>
+			<label depth="1" name="text" pos="0,-2" justify="center" pivot="topleft" upper_case="false"/>
+		</panel>
+	</append>
+	<append xpath="/windows/window[@name='windowLooting']">
+		<panel depth="10" controller="SearchIndex.TextInput, SearchIndex" name="lootContainerSearchField" pos="49,-5" width="220" height="30" value="empty" active_text_color="[white]" caret_color="[white]" selection_color="[mediumGrey_half_alpha]" character_limit="100" validation="none" backgroundcolor="[black]" style="select">
+			<sprite depth="0" name="background" color="[black]" type="sliced"/>
+			<label depth="1" name="text" pos="0,-2" justify="center" pivot="topleft" upper_case="false"/>
+		</panel>
+	</append>
+
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@controller">Quartz.Backpack, Quartz</set>
+	<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@controller">Quartz.LootContainer, Quartz</set>
+
+	<append xpath="/windows">
+		<window name="searchLootWindow" controller="SearchIndex.XUiC_SearchLoot, SearchIndex" pos="-500,0" width="300" height="50" cursor_area="true">
+			<panel name="searchLootContent" width="{width}" height="{height}" depth="0" pos="0,0" disableautobackground="false">
+				<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="100%" height="{height}" color="[mediumGrey]" type="sliced" fillcenter="false" on_press="true" />
+				<sprite style="header.icon" sprite="ui_game_symbol_search"/>
+				<textfield depth="2" pos="50,-10" width="200" height="30" name="fieldSearchLoot" password_field="false" search_field="true" close_group_on_tab="false" />
+				<textfield depth="5" name="indexSearchField" pos="50,-10" width="200" height="30" password_field="false" virtual_keyboard_prompt="vkPromptSearchTerm" search_field="true" close_group_on_tab="false"/>
+			</panel>
+		</window>
+	</append>
+</SearchLoot>
+
