@@ -25,7 +25,7 @@ jobs:
         with:
           tag: ${{ env.version }}
           commit: main
-          name: ${{ github.event.pull_request.title }}
+          name: "SearchIndex v${{ env.version }} Release"
           body: ${{ github.event.pull_request.body }}
           generateReleaseNotes: true
           artifacts: "${{ github.event.repository.name }}.zip"
