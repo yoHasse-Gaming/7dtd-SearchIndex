@@ -1,14 +1,17 @@
-name: .NET
+name: Automated Release
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
+    types: [closed]
 
 jobs:
   build:
+    if: ${{ github.event.pull_request.merged }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v2
       - name: prepare data
@@ -27,3 +30,4 @@ jobs:
           generateReleaseNotes: true
           artifacts: "${{ github.event.repository.name }}.zip"
           prerelease: ${{ env.prerelease }}
+          draft: true
