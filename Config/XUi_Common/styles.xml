@@ -1,8 +1,8 @@
 ﻿<XUiComponents name="XUi_Common/styles.xml">
 
 	<append xpath="/styles/style[@name='itemStack']">
-		<style_entry name="search_color" value="[green]"/>
-		<style_entry name="nomatch_iconcolor" value="255,255,255,125"/>
+		<style_entry name="search_color" value="38,197,82,104"/>
+		<style_entry name="nomatch_iconcolor" value="255,255,255,150"/>
 	</append>
 
 	<!-- Curved Label-->
