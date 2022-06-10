@@ -28,7 +28,7 @@ jobs:
           name: "SearchIndex Darkness Falls v${{ env.version }} Release"
           body: ${{ github.event.pull_request.body }}
           generateReleaseNotes: true
-          artifacts: "${{ github.event.repository.name }}.zip"
+          artifacts: "SearchIndex-DF.zip"
           prerelease: ${{ env.prerelease }}
           draft: true
 
