@@ -1,0 +1,6 @@
+<config>
+	<!--Darkness Falls-->
+	<set xpath="/controls/df_backpack_item_stack/@controller">Quartz.ItemStack, Quartz</set>
+	<set xpath="/controls/df_backpack_item_stack/rect/sprite[@name='background']/@color">{selectionbordercolor}</set>
+
+</config>

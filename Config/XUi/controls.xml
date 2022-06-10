@@ -2,4 +2,11 @@
 	<set xpath="/controls/item_stack/@controller">Quartz.ItemStack, Quartz</set>
 	<set xpath="/controls/backpack_item_stack/@controller">Quartz.ItemStack, Quartz</set>
 	<set xpath="/controls/drag_item_stack/rect/@controller">Quartz.ItemStack, Quartz</set>
+
+	<!--Darkness Falls-->
+	<set xpath="/controls/df_backpack_item_stack/@controller">Quartz.ItemStack, Quartz</set>
+	<set xpath="/controls/df_item_stack/@controller">Quartz.ItemStack, Quartz</set>
+	<set xpath="/controls/df_item_stack/rect/sprite[@name='background']/@color">{selectionbordercolor}</set>
+	<set xpath="/controls/df_backpack_item_stack/rect/sprite[@name='background']/@color">{selectionbordercolor}</set>
+
 </config>

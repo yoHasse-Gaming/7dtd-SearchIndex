@@ -1,6 +1,5 @@
 ﻿<config>
 	<append xpath="/xui/ruleset/window_group[@name='toolbelt']">
-	<!--<append xpath="/xui/ruleset/window_group[@name='backpack']">-->
 		<window name="searchLootWindow" anchor="RightTop"  />
 	</append>
 </config>

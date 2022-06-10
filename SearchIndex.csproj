@@ -83,7 +83,11 @@
     <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Config\XUi_Common\controls.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <ItemGroup Condition="'$(Configuration)'=='Debug'">
     <Content Include="Config\XUi\controls.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
