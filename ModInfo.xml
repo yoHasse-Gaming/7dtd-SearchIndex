@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
 	<ModInfo>
-		<Name value="yoHasse SearchIndex mod" />
-		<Description value="Small mod to enable searchable loot" />
+		<Name value="yoHasse SearchIndex DF mod" />
+		<Description value="Small mod to enable searchable loot, compatible with Darkness Falls" />
 		<Author value="yoHasse" />
 		<Version value="1.0" />
 		<Website value="" />
